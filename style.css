@@ -9,6 +9,20 @@
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: "Musubi-Black";
+    src: url("fonts/musubi-black.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Genty";
+    src: url("fonts/GentyDemo-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #ecf9ff;
     background-image: url(images/fundo.png);
@@ -712,6 +726,7 @@ footer p {
 }
 
 @media (max-width: 320px) {
+
     .quadrado1,
     .quadrado2,
     .quadrado3 {
