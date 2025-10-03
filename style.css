@@ -18,7 +18,14 @@
 
 @font-face {
     font-family: "Genty";
-    src: url("fonts/GentyDemo-Regular.otf") format("opentype");
+    src: url("fonts/genty.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Aileron";
+    src: url("fonts/aileron.regular.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
@@ -45,7 +52,7 @@ header {
     color: #000000;
     font-size: 25px;
     font-weight: bold;
-    font-family: 'Asimovian';
+    font-family: 'Genty';
 }
 
 .items {
@@ -93,7 +100,7 @@ input[type="checkbox"] {
         /* necessário para posicionar o menu internamente */
         z-index: 10;
         margin: 0;
-        background-color: #ecf9ff;
+        background-color: #3c6ca8;
     }
 
     .items {
@@ -126,13 +133,18 @@ input[type="checkbox"] {
         text-align: center;
     }
 
+    .item:hover {
+        color: #fff;
+        background-color: #4fb1fb;
+    }
+
     .icon {
         display: block;
         position: absolute;
         top: 5px;
         right: 20px;
         font-size: 40px;
-        color: #000000;
+        color: #ffffff;
         cursor: pointer;
         z-index: 30;
         font-weight: bold;
@@ -142,6 +154,8 @@ input[type="checkbox"] {
         padding: 8px;
         display: flex;
         font-size: 35px;
+        translate: 0px 5px;
+        color: #fff;
     }
 }
 
@@ -170,12 +184,14 @@ input[type="checkbox"] {
     font-size: 100px;
     margin-bottom: 30px;
     margin: 20px;
+    font-family: 'Musubi-Black';
 }
 
 .textbox h3 {
     font-weight: normal;
     font-size: 30px;
     margin: 30px;
+    font-family: 'Genty';
 }
 
 .meta {
@@ -199,6 +215,7 @@ summary {
     font-size: 60px;
     margin-bottom: 30px;
     font-weight: bold;
+    font-family: 'Genty';
 }
 
 details p {
@@ -221,6 +238,7 @@ details p {
     color: #000000;
     margin-bottom: 50px;
     text-align: center;
+    font-family: 'Musubi-Black';
 }
 
 .info p {
@@ -270,6 +288,7 @@ details p {
 .conjunto h1 {
     font-size: 60px;
     margin: 70px;
+    font-family: 'Musubi-Black';
 }
 
 .containerimagens {
@@ -335,6 +354,7 @@ details p {
     margin: 50px;
     margin-left: 140px;
     margin-bottom: 80px;
+    font-family: 'Musubi-Black';
 }
 
 .members {
@@ -359,6 +379,7 @@ details p {
 .member p {
     max-width: 200px;
     text-align: center;
+    font-family: 'Genty';
 }
 
 .foto {
@@ -391,6 +412,7 @@ footer {
 footer p {
     font-size: 23px;
     margin-bottom: 25px;
+    font-family: 'Musubi-Black';
 }
 
 .containerfooter {
@@ -601,7 +623,6 @@ footer p {
         padding: 50px;
     }
 
-
     .containerfooter {
         scale: 90%;
     }
@@ -610,6 +631,7 @@ footer p {
 @media (max-width: 600px) {
     .hero {
         padding: 10px;
+        margin: 40px;
     }
 
     .textbox img {
@@ -643,7 +665,7 @@ footer p {
 
     .hero {
         padding: 10px;
-        margin: 50px;
+        margin: 20px;
     }
 
     .textbox img {
@@ -701,12 +723,6 @@ footer p {
     .containerfooter {
         scale: 80%;
     }
-}
-
-@media (max-width: 375px) {
-    .equipe {
-        padding: 20px;
-    }
 
     .quadrado1,
     .quadrado2,
@@ -723,7 +739,28 @@ footer p {
     .textbox img {
         display: none;
     }
+
+    .titulo {
+        translate: 0px 7px;
+        align-self: center;
+        font-size: 0px;
+        background-image: url(images/logo.png);
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .equipe {
+        padding: 20px;
+    }
+
+    .hero {
+        margin: 20px;
+    }
 }
+
+@media (max-width: 375px) {}
 
 @media (max-width: 320px) {
 
