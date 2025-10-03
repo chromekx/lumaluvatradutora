@@ -1,0 +1,726 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend';
+    /* cor 1: #aaddf3 */
+    /* cor 2: #ecf9ff */
+    /* cor 3: #4fb1fb */
+    /* cor 4: #1b548d */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ecf9ff;
+    background-image: url(images/fundo.png);
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 50;
+}
+
+.titulo {
+    padding: 0px 40px;
+    margin: 0;
+    display: flex;
+    align-self: center;
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Asimovian';
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+}
+
+.item {
+    min-width: 150px;
+    color: #ffffff;
+    background-color: #4fb1fb;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    transition: 0.5s ease;
+    text-wrap: nowrap;
+}
+
+.item:hover {
+    color: #fff;
+    background-color: #3c6ca8;
+    box-shadow: 0 0 10px #3c6ca8;
+}
+
+.icon {
+    display: none;
+    font-size: 30px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+@media (max-width: 1160px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* necessário para posicionar o menu internamente */
+        z-index: 10;
+        margin: 0;
+        background-color: #ecf9ff;
+    }
+
+    .items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        z-index: 20;
+        gap: 0;
+        margin: 0;
+        /* garante que fique acima da imagem */
+    }
+
+    #menu:checked~.items {
+        max-height: 500px;
+    }
+
+    .item {
+        width: 100%;
+        padding: 23px;
+        margin: 0;
+        border-radius: 0;
+        background-color: #ecf9ff;
+        color: #000000;
+        border-top: 1px solid #3c6ca8;
+        text-align: center;
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        font-size: 40px;
+        color: #000000;
+        cursor: pointer;
+        z-index: 30;
+        font-weight: bold;
+    }
+
+    .titulo {
+        padding: 8px;
+        display: flex;
+        font-size: 35px;
+    }
+}
+
+.hero {
+    margin: 50px;
+    border-radius: 400px;
+    color: #fff;
+    background: linear-gradient(to right, #4fb1fb, #3c6ca8);
+    padding: 100px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.textbox img {
+    width: 500px;
+}
+
+.textbox {
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textbox h1 {
+    font-size: 100px;
+    margin-bottom: 30px;
+    margin: 20px;
+}
+
+.textbox h3 {
+    font-weight: normal;
+    font-size: 30px;
+    margin: 30px;
+}
+
+.meta {
+    background-color: #aaddf3;
+    padding: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+details {
+    margin: 40px;
+    text-align: center;
+    border: 5px dashed #3c6ca8;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+summary {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+details p {
+    max-width: 500px;
+    font-size: 23px;
+}
+
+.info {
+    background-color: transparent;
+    padding: 100px;
+    margin-bottom: 50px;
+    font-size: 23px;
+    overflow: hidden;
+    min-height: fit-content;
+    flex-wrap: wrap;
+}
+
+.info h1 {
+    font-size: 60px;
+    color: #000000;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.info p {
+    overflow: hidden;
+}
+
+.quadrados {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.quadrado1,
+.quadrado2,
+.quadrado3 {
+    background-color: #3c6ca8;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+.quadrado1 img,
+.quadrado2 img,
+.quadrado3 img {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+}
+
+.quadrado1 p,
+.quadrado2 p,
+.quadrado3 p {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 1s ease;
+    translate: 0px 15px;
+}
+
+.conjunto {
+    margin: 0px 150px 100px 150px;
+}
+
+.conjunto h1 {
+    font-size: 60px;
+    margin: 70px;
+}
+
+.containerimagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.imagem1,
+.imagem2,
+.imagem3,
+.imagem4,
+.imagem5,
+.imagem6 {
+    width: 400px;
+    height: 400px;
+    background-clip: cover;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: fit-content;
+}
+
+.imagem1 p,
+.imagem2 p,
+.imagem3 p,
+.imagem4 p,
+.imagem5 p,
+.imagem6 p {
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem1 p:hover,
+.imagem2 p:hover,
+.imagem3 p:hover,
+.imagem4 p:hover,
+.imagem5 p:hover,
+.imagem6 p:hover {
+    font-size: 22px;
+}
+
+.equipe {
+    background: linear-gradient(to right, #4fb1fb, #3c6ca8);
+    padding: 50px;
+    justify-self: center;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+
+.equipe h1 {
+    font-size: 60px;
+    margin: 50px;
+    margin-left: 140px;
+    margin-bottom: 80px;
+}
+
+.members {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    margin: 40px;
+}
+
+.member {
+    justify-items: center;
+    font-size: 20px;
+    transition: transform 0.5s;
+}
+
+.member:hover {
+    transform: scale(1.05);
+}
+
+.member p {
+    max-width: 200px;
+    text-align: center;
+}
+
+.foto {
+    display: flex;
+    border-radius: 100%;
+    width: 160px;
+    margin: 10px;
+    justify-self: center;
+}
+
+.member:hover>.foto {
+    outline: 5px solid #aaddf3;
+    /* outline-offset: 5px; afasta um pouco da imagem */
+    box-shadow: 0 0px 50px #aaddf3;
+}
+
+footer {
+    width: 100%;
+    height: 190px;
+    background-color: #3c6ca8;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer p {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.containerfooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.redesfooter {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.redesfooter a {
+    color: #fff;
+    font-size: 40px;
+    transition: color 0.2s, scale 0.2s;
+}
+
+.redesfooter a:hover {
+    color: #aaddf3;
+    scale: 115%;
+}
+
+@media (max-width: 1750px) {
+    .info p {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .info p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .info p {
+        font-size: 17px;
+    }
+
+    .textbox img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .info p {
+        font-size: 15px;
+    }
+
+    .textbox img {
+        width: 250px;
+    }
+
+    .hero {
+        padding: 50px;
+    }
+
+    .conjunto h1 {
+        text-align: center;
+    }
+
+    .equipe h1 {
+        text-align: center;
+        margin: 30px;
+    }
+
+    .imagem1,
+    .imagem2,
+    .imagem3,
+    .imagem4,
+    .imagem5,
+    .imagem6 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .imagem1 p,
+    .imagem2 p,
+    .imagem3 p,
+    .imagem4 p,
+    .imagem5 p,
+    .imagem6 p {
+        width: 300px;
+        height: 300px;
+        font-size: 15px;
+    }
+
+    .imagem1 p:hover,
+    .imagem2 p:hover,
+    .imagem3 p:hover,
+    .imagem4 p:hover,
+    .imagem5 p:hover,
+    .imagem6 p:hover {
+        font-size: 18px;
+    }
+
+    .quadrados {
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    .quadrado1,
+    .quadrado2,
+    .quadrado3 {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    .info p {
+        font-size: 22px;
+    }
+
+    .textbox img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 1010px) {
+    .hero {
+        padding: 50px;
+    }
+
+    .textbox img {
+        width: 200px;
+    }
+
+    .textbox h1 {
+        font-size: 80px;
+    }
+
+    .textbox h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .textbox h1 {
+        font-size: 65px;
+    }
+
+    .sla {
+        justify-content: space-evenly;
+    }
+
+    .conjunto {
+        margin: 0;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 680px) {
+    .meta {
+        padding: 60px;
+    }
+
+    summary {
+        font-size: 45px;
+    }
+
+    details p {
+        font-size: 18px;
+    }
+
+    .info h1 {
+        font-size: 45px;
+    }
+
+    .conjunto h1 {
+        font-size: 45px;
+        margin: 30px;
+        margin-top: -80px;
+    }
+
+    .equipe h1 {
+        font-size: 45px;
+    }
+
+    .textbox h1 {
+        font-size: 40px;
+    }
+
+    .textbox h3 {
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    .textbox img {
+        width: 150px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .quadrado1,
+    .quadrado2,
+    .quadrado3 {
+        scale: 90%;
+    }
+
+    .info {
+        padding: 50px;
+    }
+
+
+    .containerfooter {
+        scale: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 10px;
+    }
+
+    .textbox img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    summary {
+        font-size: 32px;
+    }
+
+    .info h1 {
+        font-size: 38px;
+        margin-bottom: 0px;
+    }
+
+    .conjunto h1 {
+        font-size: 38px;
+        margin: 30px;
+        margin-top: -80px;
+    }
+
+    .equipe h1 {
+        font-size: 38px;
+    }
+
+    .quadrados {
+        gap: 0;
+    }
+
+    .hero {
+        padding: 10px;
+        margin: 50px;
+    }
+
+    .textbox img {
+        width: 75px;
+    }
+
+    .textbox h1 {
+        font-size: 38px;
+        width: fit-content;
+    }
+
+    .textbox h3 {
+        font-size: 13px;
+        width: fit-content;
+    }
+
+    .textbox {
+        margin: 20px;
+    }
+
+    .meta {
+        padding: 0px;
+    }
+
+    .members {
+        margin: 0px;
+    }
+
+    .quadrados {
+        margin: 20px;
+    }
+
+    .quadrado1,
+    .quadrado2,
+    .quadrado3 {
+        max-width: 330px;
+    }
+
+    .quadrado1 p,
+    .quadrado2 p,
+    .quadrado3 p {
+        font-size: 20px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    details p {
+        font-size: 15px;
+    }
+
+    .containerfooter {
+        scale: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .equipe {
+        padding: 20px;
+    }
+
+    .quadrado1,
+    .quadrado2,
+    .quadrado3 {
+        max-width: 280px;
+    }
+
+    .quadrado1 p,
+    .quadrado2 p,
+    .quadrado3 p {
+        font-size: 18px;
+    }
+
+    .textbox img {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .quadrado1,
+    .quadrado2,
+    .quadrado3 {
+        max-width: 250px;
+    }
+
+    .quadrado1 p,
+    .quadrado2 p,
+    .quadrado3 p {
+        font-size: 16px;
+    }
+}
