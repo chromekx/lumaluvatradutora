@@ -127,7 +127,7 @@ input[type="checkbox"] {
         padding: 23px;
         margin: 0;
         border-radius: 0;
-        background-color: #ecf9ff;
+        background-color: #d0f1ff;
         color: #000000;
         border-top: 1px solid #3c6ca8;
         text-align: center;
@@ -666,6 +666,8 @@ footer p {
     .hero {
         padding: 10px;
         margin: 20px;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 
     .textbox img {
@@ -716,8 +718,12 @@ footer p {
 }
 
 @media (max-width: 425px) {
+    summary {
+        font-size: 29px;
+    }
+
     details p {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .containerfooter {
@@ -757,6 +763,8 @@ footer p {
 
     .hero {
         margin: 20px;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 }
 
