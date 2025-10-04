@@ -715,9 +715,20 @@ footer p {
     .info {
         padding: 20px;
     }
+
 }
 
 @media (max-width: 425px) {
+    .textbox {
+        justify-self: center;
+    }
+
+    .sla2, .sla3 {
+        display: block;
+        justify-self: center;
+        text-align: center;
+    }
+
     summary {
         font-size: 29px;
     }
