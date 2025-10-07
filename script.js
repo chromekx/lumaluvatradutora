@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Acessa o <h2> dentro de .sla4 e aumenta a fonte para aparecer.
                 const h2 = card.querySelector('.sla4 h2');
-                if (h2) h2.style.fontSize = '35px';
+                if (h2) h2.style.fontSize = '30px';
 
                 // Deixa o quadrado mais arredondado, mas menos "circular".
                 card.style.borderRadius = '20px';
