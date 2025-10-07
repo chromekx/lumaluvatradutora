@@ -211,12 +211,11 @@ input[type="checkbox"] {
 
 .meta {
     background-color: #aaddf3;
-    padding: 50px;
     display: flex;
     margin-bottom: 30px;
     flex-wrap: wrap;
     text-align: center;
-    padding: 50px;
+    padding: 70px;
     justify-content: space-between;
 }
 
@@ -318,6 +317,10 @@ details p {
     font-family: 'Biscuit Glitch';
     font-size: 0;
     overflow: hidden;
+}
+
+.quadrado2 .grafico {
+    max-height: 0;
 }
 
 .conjunto {
@@ -481,7 +484,7 @@ footer p {
 
 @media (max-width: 1750px) {
     .info p {
-        font-size: 21px;
+        font-size: 19px;
     }
 }
 
@@ -822,10 +825,10 @@ footer p {
 }
 
 @media (max-width: 375px) {
-
     .quadrado1,
     .quadrado2,
-    .quadrado3 {
+    .quadrado3,
+    .quadrado4 {
         max-width: 250px;
     }
 

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Seleciona todos os elementos com as classes .quadrado1, .quadrado2 e .quadrado3.
     // Retorna uma NodeList (uma espécie de "array" de elementos HTML).
-    const cards = document.querySelectorAll('.quadrado1, .quadrado2, .quadrado3');
+    const cards = document.querySelectorAll('.quadrado1, .quadrado2, .quadrado3, .quadrado4');
 
     // Para cada elemento encontrado (cada "quadrado"), adiciona um evento de clique.
     cards.forEach(card => {
@@ -26,7 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Acessa o <p> dentro do card e aumenta sua altura máxima, mostrando o texto.
                 const p = card.querySelector('p');
-                if (p) p.style.maxHeight = '500px';
+                if (p) p.style.maxHeight = '550px';
+
+                const img = card.querySelector('img');
+                if (img) img.style.maxHeight = '550px';
 
                 // Acessa o <h2> dentro de .sla4 e aumenta a fonte para aparecer.
                 const h2 = card.querySelector('.sla4 h2');
