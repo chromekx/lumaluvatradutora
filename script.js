@@ -58,6 +58,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.grafico');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const isOpen = card.classList.toggle('open');
+            
+            if (isOpen) {
+                card.style.width = '450px';
+                card.style.height = '420px';
+                const h2 = card.querySelector('.sla4 h2');
+                if (h2) h2.style.fontSize = '30px';
+                card.style.borderRadius = '20px';
+            }
+            else {
+                card.style.width = '50px';
+                card.style.height = '50px';
+                const h2 = card.querySelector('.sla4 h2');
+                if (h2) h2.style.fontSize = '0';
+                card.style.borderRadius = '50px';
+            }
+        });
+    });
+});
+
 // Seleciona todos os elementos <p> que estão dentro de qualquer elemento com a classe "imagem".
 // querySelectorAll('.imagem p') usa um seletor composto (classe + elemento).
 document.querySelectorAll('.imagem p').forEach(p => {

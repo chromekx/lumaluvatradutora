@@ -25,7 +25,7 @@
 
 @font-face {
     font-family: "Aileron";
-    src: url("fonts/aileron.regular.otf") format("opentype");
+    src: url("fonts/aileron.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
@@ -39,7 +39,21 @@
 
 @font-face {
     font-family: "Biscuit Glitch";
-    src: url("fonts/biscuit_glitch.ttf") format("opentype");
+    src: url("fonts/biscuit-glitch.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Super Dream";
+    src: url("fonts/super-trend.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Super Dream";
+    src: url("fonts/super-dream.ttf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
@@ -206,7 +220,7 @@ input[type="checkbox"] {
     font-weight: normal;
     font-size: 30px;
     margin: 30px;
-    font-family: 'Biscuit Glitch';
+    font-family: 'Super Dream';
 }
 
 .meta {
@@ -243,7 +257,7 @@ summary {
     font-size: 60px;
     margin-bottom: 30px;
     font-weight: bold;
-    font-family: 'Biscuit Glitch';
+    font-family: 'Super Dream';
 }
 
 details p {
@@ -268,10 +282,6 @@ details p {
     font-family: 'Musubi-Black';
 }
 
-.info p {
-    overflow: hidden;
-}
-
 .quadrados {
     display: flex;
     justify-content: center;
@@ -291,7 +301,7 @@ details p {
     overflow: hidden;
 }
 
-.quadrado img {
+.quadrado img, .grafico img {
     width: 50px;
     height: 50px;
     color: #fff;
@@ -304,13 +314,40 @@ details p {
     translate: 0px 15px;
 }
 
+.grafico {
+    margin: 40px;
+    background-color: #4fb1fb;
+    padding: 20px;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #ffffff;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.graficoimagem img {
+    margin-top: 20px;
+    align-self: center;
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    border-radius: 20px;
+}
+
 .sla4 {
     display: flex;
     justify-content: space-between;
 }
 
 .sla4 h2 {
-    font-family: 'Biscuit Glitch';
+    font-family: 'Super Dream';
     font-size: 0;
     overflow: hidden;
     align-self: center;
@@ -355,6 +392,7 @@ details p {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Super Dream';
 }
 
 .imagem p:hover {
@@ -399,7 +437,7 @@ details p {
 .member p {
     max-width: 200px;
     text-align: center;
-    font-family: 'Biscuit Glitch';
+    font-family: 'Super Dream';
 }
 
 .foto {
@@ -618,7 +656,7 @@ footer p {
         padding: 20px;
     }
 
-    .quadrado {
+    .quadrado, .grafico {
         scale: 90%;
     }
 
@@ -640,6 +678,8 @@ footer p {
     .textbox img {
         width: 100px;
     }
+
+
 }
 
 @media (max-width: 500px) {
@@ -663,6 +703,10 @@ footer p {
 
     .quadrados {
         gap: 0;
+    }
+
+    .grafico {
+        margin: 0px;
     }
 
     .hero {
@@ -705,6 +749,11 @@ footer p {
 
     .quadrado {
         max-width: 330px;
+    }
+
+    .grafico {
+        max-width: 330px;
+        max-height: 330px;
     }
 
     .quadrado p {
@@ -777,11 +826,21 @@ footer p {
         margin-top: 80px;
         margin-bottom: 80px;
     }
+
+    .textbox h3 {
+        font-size: 15px;
+    }
+
+    .grafico {
+        max-width: 250px;
+        max-height: 270px;
+    }
 }
 
 @media (max-width: 375px) {
     .quadrado {
         max-width: 250px;
+        max-height: 550px;
     }
 
     .quadrado p {
