@@ -279,9 +279,7 @@ details p {
     gap: 40px;
 }
 
-.quadrado1,
-.quadrado2,
-.quadrado3 {
+.quadrado {
     background-color: #3c6ca8;
     padding: 20px;
     width: 50px;
@@ -289,19 +287,17 @@ details p {
     border-radius: 50px;
     color: #ffffff;
     transition: all 0.7s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
-.quadrado1 img,
-.quadrado2 img,
-.quadrado3 img {
+.quadrado img {
     width: 50px;
     height: 50px;
     color: #fff;
 }
 
-.quadrado1 p,
-.quadrado2 p,
-.quadrado3 p {
+.quadrado p {
     overflow: hidden;
     max-height: 0;
     transition: all 1s ease;
@@ -317,10 +313,7 @@ details p {
     font-family: 'Biscuit Glitch';
     font-size: 0;
     overflow: hidden;
-}
-
-.quadrado2 .grafico {
-    max-height: 0;
+    align-self: center;
 }
 
 .conjunto {
@@ -341,12 +334,7 @@ details p {
     overflow: hidden;
 }
 
-.imagem1,
-.imagem2,
-.imagem3,
-.imagem4,
-.imagem5,
-.imagem6 {
+.imagem {
     width: 400px;
     height: 400px;
     background-clip: cover;
@@ -359,12 +347,7 @@ details p {
     min-width: fit-content;
 }
 
-.imagem1 p,
-.imagem2 p,
-.imagem3 p,
-.imagem4 p,
-.imagem5 p,
-.imagem6 p {
+.imagem p {
     transition: all 0.5s ease;
     backdrop-filter: blur(10px);
     width: 400px;
@@ -374,12 +357,7 @@ details p {
     align-items: center;
 }
 
-.imagem1 p:hover,
-.imagem2 p:hover,
-.imagem3 p:hover,
-.imagem4 p:hover,
-.imagem5 p:hover,
-.imagem6 p:hover {
+.imagem p:hover {
     font-size: 22px;
 }
 
@@ -532,33 +510,18 @@ footer p {
         margin: 30px;
     }
 
-    .imagem1,
-    .imagem2,
-    .imagem3,
-    .imagem4,
-    .imagem5,
-    .imagem6 {
+    .imagem {
         width: 300px;
         height: 300px;
     }
 
-    .imagem1 p,
-    .imagem2 p,
-    .imagem3 p,
-    .imagem4 p,
-    .imagem5 p,
-    .imagem6 p {
+    .imagem p {
         width: 300px;
         height: 300px;
         font-size: 15px;
     }
 
-    .imagem1 p:hover,
-    .imagem2 p:hover,
-    .imagem3 p:hover,
-    .imagem4 p:hover,
-    .imagem5 p:hover,
-    .imagem6 p:hover {
+    .imagem p:hover {
         font-size: 18px;
     }
 
@@ -567,9 +530,7 @@ footer p {
         justify-self: center;
     }
 
-    .quadrado1,
-    .quadrado2,
-    .quadrado3 {
+    .quadrado {
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -633,7 +594,7 @@ footer p {
     .conjunto h1 {
         font-size: 45px;
         margin: 30px;
-        margin-top: -80px;
+        margin-top: -30px;
     }
 
     .equipe h1 {
@@ -657,9 +618,7 @@ footer p {
         padding: 20px;
     }
 
-    .quadrado1,
-    .quadrado2,
-    .quadrado3 {
+    .quadrado {
         scale: 90%;
     }
 
@@ -696,7 +655,6 @@ footer p {
     .conjunto h1 {
         font-size: 38px;
         margin: 30px;
-        margin-top: -80px;
     }
 
     .equipe h1 {
@@ -738,21 +696,18 @@ footer p {
 
     .members {
         margin: 0px;
+        margin-bottom: 40px;
     }
 
     .quadrados {
         margin: 20px;
     }
 
-    .quadrado1,
-    .quadrado2,
-    .quadrado3 {
+    .quadrado {
         max-width: 330px;
     }
 
-    .quadrado1 p,
-    .quadrado2 p,
-    .quadrado3 p {
+    .quadrado p {
         font-size: 20px;
     }
 
@@ -763,6 +718,10 @@ footer p {
 }
 
 @media (max-width: 425px) {
+    .info h1 {
+        margin: 40px;
+    }
+
     .textbox {
         justify-self: center;
     }
@@ -786,15 +745,11 @@ footer p {
         scale: 80%;
     }
 
-    .quadrado1,
-    .quadrado2,
-    .quadrado3 {
+    .quadrado {
         max-width: 280px;
     }
 
-    .quadrado1 p,
-    .quadrado2 p,
-    .quadrado3 p {
+    .quadrado p {
         font-size: 18px;
     }
 
@@ -825,16 +780,11 @@ footer p {
 }
 
 @media (max-width: 375px) {
-    .quadrado1,
-    .quadrado2,
-    .quadrado3,
-    .quadrado4 {
+    .quadrado {
         max-width: 250px;
     }
 
-    .quadrado1 p,
-    .quadrado2 p,
-    .quadrado3 p {
+    .quadrado p {
         font-size: 16px;
     }
 

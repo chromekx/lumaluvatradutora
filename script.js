@@ -4,11 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Seleciona todos os elementos com as classes .quadrado1, .quadrado2 e .quadrado3.
     // Retorna uma NodeList (uma espécie de "array" de elementos HTML).
-    const cards = document.querySelectorAll('.quadrado1, .quadrado2, .quadrado3, .quadrado4');
+    const cards = document.querySelectorAll('.quadrado');
 
     // Para cada elemento encontrado (cada "quadrado"), adiciona um evento de clique.
     cards.forEach(card => {
-
         // Adiciona um ouvinte de evento de clique.
         // Quando o usuário clicar nesse quadrado, a função abaixo será executada.
         card.addEventListener('click', () => {
@@ -28,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const p = card.querySelector('p');
                 if (p) p.style.maxHeight = '550px';
 
-                const img = card.querySelector('img');
-                if (img) img.style.maxHeight = '550px';
 
                 // Acessa o <h2> dentro de .sla4 e aumenta a fonte para aparecer.
                 const h2 = card.querySelector('.sla4 h2');
@@ -37,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Deixa o quadrado mais arredondado, mas menos "circular".
                 card.style.borderRadius = '20px';
+                const img = card.querySelector('img');
             }
 
             // Caso o card esteja sendo fechado (isOpen = false):
@@ -60,33 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-document.querySelector('.imagem1 p').onclick = function () {
-    document.querySelector('.imagem1 p').style.backdropFilter = "0px";
-    document.querySelector('.imagem1 p').style.display = "none";
-}
-
-document.querySelector('.imagem2 p').onclick = function () {
-    document.querySelector('.imagem2 p').style.backdropFilter = "0px";
-    document.querySelector('.imagem2 p').style.display = "none";
-}
-
-document.querySelector('.imagem3 p').onclick = function () {
-    document.querySelector('.imagem3 p').style.backdropFilter = "0px";
-    document.querySelector('.imagem3 p').style.display = "none";
-}
-
-document.querySelector('.imagem4 p').onclick = function () {
-    document.querySelector('.imagem4 p').style.backdropFilter = "0px";
-    document.querySelector('.imagem4 p').style.display = "none";
-}
-
-document.querySelector('.imagem5 p').onclick = function () {
-    document.querySelector('.imagem5 p').style.backdropFilter = "0px";
-    document.querySelector('.imagem5 p').style.display = "none";
-}
-
-document.querySelector('.imagem6 p').onclick = function () {
-    document.querySelector('.imagem6 p').style.backdropFilter = "0px";
-    document.querySelector('.imagem6 p').style.display = "none";
-}
+// Seleciona todos os elementos <p> que estão dentro de qualquer elemento com a classe "imagem".
+// querySelectorAll('.imagem p') usa um seletor composto (classe + elemento).
+document.querySelectorAll('.imagem p').forEach(p => {
+    // Para cada <p>, adiciona um listener de clique.
+    // Quando o parágrafo for clicado, define display = 'none' para escondê-lo.
+    // p.style.display altera o estilo inline para remover o elemento do fluxo de layout.
+    p.addEventListener('click', () => {
+        p.style.display = 'none';
+    });
+});
