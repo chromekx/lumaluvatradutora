@@ -267,7 +267,7 @@ details p {
 .info {
     background-color: transparent;
     padding: 100px;
-    margin-bottom: 50px;
+    padding-bottom: 10px;
     font-size: 23px;
     overflow: hidden;
     min-height: fit-content;
